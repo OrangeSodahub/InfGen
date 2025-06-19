@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Long-term Traffic Simulation with Interleaved Autoregressive Motion and Scenario Generation">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX3KXSWCZC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MX3KXSWCZC');
+  </script>
+
+  <title>Long-term Traffic Simulation with Interleaved Autoregressive Motion and Scenario Generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="stylesheet" href="static/css/index.css"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Long-term Traffic Simulation with Interleaved Autoregressive Motion and Scenario Generation
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/OrangeSodahub" target="_blank">Xiuyu Yang</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://ariostgx.github.io/website/" target="_blank">Shuhan Tan</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.philkr.net/" target="_blank">Philipp Kr&auml;henb&uuml;hl</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">UT Austin</span>
+              <span class="author-block">(<sup>*</sup>Equal Contribution)</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="assets/infgen_preprint.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/OrangeSodahub/ORV" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="assets/images/teaser.png" alt="Teaser Image" style="max-width: 100%; height: auto;">
+        <h2 class="subtitle has-text-centered">
+          <strong>TL;DR InfGen performs interleaved long-term closed-loop motion simulation and scene generation with unified next-token prediction.</strong>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              An ideal traffic simulator replicates the realistic long-term point-to-point trip that a self-driving system experiences during deployment.
+              Prior models and benchmarks focus on closed-loop motion simulation for initial agents in a scene.
+              This is problematic for long-term simulation.
+              Agents enter and exit the scene as the ego vehicle enters new regions.
+              We propose InfGen, a unified next-token prediction model that performs interleaved closed-loop motion simulation and scene generation.
+              InfGen automatically switches between closed-loop motion simulation and scene generation mode.
+              It enables stable long-term rollout simulation.
+              InfGen performs at the state-of-the-art in short-term (9s) traffic simulation, and significantly outperforms all other methods in long-term (30s) simulation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+  
+  <section class="section hero" id="method_title">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">InfGen</h2>
+      <div class="content has-text-justified">
+        <p>
+          A simulator should provide a realistic model of the environment, the ego-vehicle, and all other traffic agents throughout the trip.
+          Existing simulators easily handle an expansive static environment and intricate ego-vehicle dynamics.
+          However, they often lack a stable long-term simulation of non-ego traffic agents.
+        </p>
+        <p>
+          <strong>Comparison: Ego agents run into an EMPTY map region with surrounding agents disappearing for prior works while InfGen keeps the realisim of spatial layout: (notations-
+            <span style="color: rgb(214, 113, 131);">ego agent</span>,
+            <span style="color: rgb(206, 233, 252);">initially placed agents</span>,
+            <span style="color: rgb(178, 234, 185);">dynamically generated agents)</span>:</strong>
+        </p>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered is-vcentered">
+        <div class="column has-text-centered">
+          <img src="assets/videos/prior1.gif" alt="GIF 1" style="max-width: 100%; height: auto;">
+          <p class="has-text-centered is-size-6">Prior work 1</p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="assets/videos/prior2.gif" alt="GIF 2" style="max-width: 100%; height: auto;">
+          <p class="has-text-centered is-size-6">Prior work 2</p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="assets/videos/infgen.gif" alt="GIF 3" style="max-width: 100%; height: auto;">
+          <p class="has-text-centered is-size-6">InfGen</p>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <br>
+        <p>
+          InfGen is a unified autoregressive transformer with interleaved token prediction.
+          It handles temporal motion simulation and spatial scene generation in a unified model:
+        </p>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <img src="assets/images/method.png" alt="Method Image"
+            style="max-width: 70%; height: auto; display: block; margin: auto; margin-bottom: 1rem; margin-top: 1.5rem;">
+      <h2 class="subtitle has-text-centered" style="margin-bottom: 1.5rem;">
+        <strong>Overview of InfGen interleaved next-token-prediction process.</strong>
+      </h2>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <p>
+          We use multiple tokenizers to convert task-specific behaviors of <strong><span style="color: rgb(40, 154, 247);">motion simulation</span></strong> and <strong><span style="color: rgb(127, 202, 129);">scenario generation</span></strong> into discrete tokens.
+          We then add <strong><span style="color: rgb(182, 160, 251);">control tokens</span></strong>(&lt;BEGIN MOTION&gt;,&lt;ADD AGENT&gt;,&lt;REMOVE AGENT&gt;,&lt;KEEP AGENT&gt;) to mark the task switch between the two tasks, indicating what the current task is and when to switch.
+          This design allows us to convert each real log into a single ordered sequence of tokens containing interleaved data of both tasks.
+          We directly train InfGen with the next token prediction objective end-to-end on short-term driving logs and produce stable long-term rollouts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero" id="arch_title">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Architecture</h2>
+    </div>
+    <div class="container is-max-desktop" style="margin-top: 1rem;">
+      <div class="content has-text-justified">
+        <p>
+          The pipeline of InfGen is built upon <a href="https://smart-motion.github.io/smart/">SMART</a> (thanks for their open-source works!). Basically, we formulate a dynamic agent matrix and
+          then continuously update (edit) such agent matrix along two orthogonal axes:
+        </p>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <img src="assets/images/pipeline.png" alt="Method Image" style="max-width: 100%; height: auto; margin-top: 1.5rem;">
+      <h2 class="subtitle has-text-centered">
+        <strong>Overview of InfGen Architecture.</strong>
+      </h2>
+    </div>
+    <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+      <div class="content has-text-justified">
+        <p>
+          <strong>Dynamic Agent Matrix</strong>: The horizontal axis represent temporal lifecycle of each agent: being inserted, active moving and finally exit the scenario. The length of the temporal axis equals to the rollout horizon.
+          On the other hand, the vertical axis represent spatial agent layout at each timestep, where the width represent the number of active agents at each step.
+        </p>
+        <p>
+          <strong>Temporal Motion Simulation</strong>: shown as <strong><span style="color: rgb(78,163,250);">blue flow</span></strong>. Similar to existing closed-loop simulation works, it predicts motion tokens for all existing agents and additionally predicts control tokens to decide whether each agent is going to execute the motions or to be removed. It adds/deletes columns of the agent matrix each time.
+        </p>
+        <p>
+          <strong>Spatial Scene Generation</strong>: shown as <strong><span style="color: rgb(117, 202, 112);">green flow</span></strong>. It predicts control tokens and pose tokens to decide whether to insert an anget or not and how to place the new agents (their initial positions and headings, etc). It adds/deletes rows of the agent matrix each time.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section hero" id="results_title">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">More Results</h2>
+    </div>
+    <div class="container is-max-desktop" style="width: 100%; text-align: left; margin-top: 1rem;">
+        <p style="text-align: left !important;">
+          For more analysis, please refer to our paper.
+        </p>
+    </div>
+    <div class="container is-max-desktop" style="margin-top: 1rem;">
+      <div class="columns is-centered is-vcentered">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline style="max-width: 100%; height: auto; image-rendering: pixelated">
+            <source src="assets/videos/result11.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline style="max-width: 100%; height: auto; image-rendering: pixelated">
+            <source src="assets/videos/result12.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline style="max-width: 100%; height: auto; image-rendering: pixelated">
+            <source src="assets/videos/result13.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered is-vcentered">
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline style="max-width: 100%; height: auto; image-rendering: pixelated">
+            <source src="assets/videos/result21.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline style="max-width: 100%; height: auto; image-rendering: pixelated">
+            <source src="assets/videos/result22.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column has-text-centered">
+          <video autoplay loop muted playsinline style="max-width: 100%; height: auto; image-rendering: pixelated">
+            <source src="assets/videos/result23.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="assets/images/rollouts.png" alt="Teaser Image" style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light" id="text_supp">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title has-text-centered">Textual Supplementary Material</h2>
+
+        <iframe src="supp.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+  <section class="section" id="bibtex_title">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+<pre><code>@article{yang2025infgen,
+  title={Long-term Traffic Simulation with Interleaved Autoregressive Motion and Scenario Generation},
+  author={Yang, Xiuyu and Tan, Shuhan and Kr{\"a}henb{\"u}hl, Philipp},
+  journal={arXiv preprint arXiv:xxx},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+  
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a
+                href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
