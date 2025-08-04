@@ -1,0 +1,6 @@
+[submodule "thirdparty/SMART"]
+	path = thirdparty/SMART
+	url = https://github.com/OrangeSodahub/SMART.git
+[submodule "thirdparty/catk"]
+	path = thirdparty/catk
+	url = https://github.com/OrangeSodahub/catk.git
