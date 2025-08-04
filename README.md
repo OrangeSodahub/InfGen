@@ -35,7 +35,7 @@ conda activate infgen
 
 ## Data Preparation
 
-> NOTE: We have similar execution steps to SMART, but the outputs Step3 are not identical.
+> NOTE: We have similar execution steps to SMART, but the outputs of Step3 are not identical.
 
 **Step 1: Download the Dataset**
 
@@ -87,7 +87,7 @@ bash scripts/run_eval.sh $GPUS
 
 - [x] Release arXiv technical report
 - [x] Release full codes
-- [] Release other detailed instructions
+- [ ] Release other detailed instructions
 
 
 ## Acknowledgement
