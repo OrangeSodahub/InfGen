@@ -11,7 +11,7 @@ from pytorch_lightning.loggers import WandbLogger
 
 from infgen.utils.func import Logging, load_config_act
 from infgen.datasets.scalable_dataset import MultiDataModule
-from infgen.model.smart import SMART
+from infgen.model.infgen import InfGen
 
 
 def backup(source_dir, backup_dir):
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     torch.set_printoptions(precision=3)
 
     parser = ArgumentParser()
-    Predictor_hash = {'smart': SMART,}
+    Predictor_hash = {'infgen': InfGen,}
     parser.add_argument('--config', type=str, default='configs/ours_long_term.yaml')
     parser.add_argument('--pretrain_ckpt', type=str, default='')
     parser.add_argument('--ckpt_path', type=str, default='')

@@ -16,7 +16,7 @@ from collections import defaultdict
 from infgen.utils.func import angle_between_2d_vectors
 from infgen.modules.layers import OccLoss
 from infgen.modules.attr_tokenizer import Attr_Tokenizer
-from infgen.modules.smart_decoder import SMARTDecoder
+from infgen.modules.infgen_decoder import InfGenDecoder
 from infgen.datasets.preprocess import TokenProcessor
 from infgen.metrics.compute_metrics import *
 from infgen.utils.metrics import *
@@ -24,10 +24,10 @@ from infgen.utils.visualization import *
 from infgen.utils.func import wrap_angle
 
 
-class SMART(pl.LightningModule):
+class InfGen(pl.LightningModule):
 
     def __init__(self, model_config, save_path: os.PathLike="", logger=None, **kwargs) -> None:
-        super(SMART, self).__init__()
+        super(InfGen, self).__init__()
         self.save_hyperparameters()
         self.model_config = model_config
         self.warmup_steps = model_config.warmup_steps
@@ -96,7 +96,7 @@ class SMART(pl.LightningModule):
 
         self.seed_size = int(model_config.decoder.seed_size)
 
-        self.encoder = SMARTDecoder(
+        self.encoder = InfGenDecoder(
             decoder_type=model_config.decoder_type,
             dataset=model_config.dataset,
             input_dim=model_config.input_dim,

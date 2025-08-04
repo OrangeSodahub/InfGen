@@ -15,7 +15,7 @@ from infgen.utils.visualization import *
 from infgen.utils.func import angle_between_2d_vectors, wrap_angle, weight_init
 
 
-class SMARTOccDecoder(nn.Module):
+class InfGenOccDecoder(nn.Module):
 
     def __init__(self,
                  dataset: str,
@@ -47,7 +47,7 @@ class SMARTOccDecoder(nn.Module):
                  loss_weight: dict=None,
                  logger=None) -> None:
 
-        super(SMARTOccDecoder, self).__init__()
+        super(InfGenOccDecoder, self).__init__()
         self.dataset = dataset
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim

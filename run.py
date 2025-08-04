@@ -11,7 +11,7 @@ from pytorch_lightning.loggers import WandbLogger
 
 from infgen.utils.func import RankedLogger, load_config_act, CONSOLE
 from infgen.datasets.scalable_dataset import MultiDataModule
-from infgen.model.smart import SMART
+from infgen.model.infgen import InfGen
 
 
 def backup(source_dir, backup_dir):
@@ -100,7 +100,7 @@ if __name__ == '__main__':
 
     # ! setup datamodule and model
     datamodule = MultiDataModule(**vars(config.Dataset), logger=logger, scenario_id=args.scenario_id)
-    model = SMART(config.Model, save_path=args.save_ckpt_path, logger=logger, max_epochs=max_epochs)
+    model = InfGen(config.Model, save_path=args.save_ckpt_path, logger=logger, max_epochs=max_epochs)
     if args.pretrain_ckpt:
         model.load_state_from_file(filename=args.pretrain_ckpt)
     strategy = DDPStrategy(find_unused_parameters=True, gradient_as_bucket_view=True)

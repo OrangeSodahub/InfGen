@@ -10,7 +10,7 @@ export WANDB=1
 # args
 DEVICES=$1
 CONFIG='configs/ours_long_term.yaml'
-SAVE_CKPT_PATH='output/scalable_smart_long'
+SAVE_CKPT_PATH='output/scalable_infgen_long'
 
 # run
 PYTHONPATH=".":$PYTHONPATH python3 run.py \

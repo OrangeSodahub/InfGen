@@ -3,16 +3,16 @@ import torch
 import torch.nn as nn
 from torch_geometric.data import HeteroData
 from infgen.modules.attr_tokenizer import Attr_Tokenizer
-from infgen.modules.agent_decoder import SMARTAgentDecoder
-from infgen.modules.occ_decoder import SMARTOccDecoder
-from infgen.modules.map_decoder import SMARTMapDecoder
+from infgen.modules.agent_decoder import InfGenAgentDecoder
+from infgen.modules.occ_decoder import InfGenOccDecoder
+from infgen.modules.map_decoder import InfGenMapDecoder
 
 
-DECODER = {'agent_decoder': SMARTAgentDecoder,
-           'occ_decoder': SMARTOccDecoder}
+DECODER = {'agent_decoder': InfGenAgentDecoder,
+           'occ_decoder': InfGenOccDecoder}
 
 
-class SMARTDecoder(nn.Module):
+class InfGenDecoder(nn.Module):
 
     def __init__(self,
                  decoder_type: str,
@@ -51,9 +51,9 @@ class SMARTDecoder(nn.Module):
                  loss_weight: dict=None,
                  logger=None) -> None:
 
-        super(SMARTDecoder, self).__init__()
+        super(InfGenDecoder, self).__init__()
 
-        self.map_encoder = SMARTMapDecoder(
+        self.map_encoder = InfGenMapDecoder(
             dataset=dataset,
             input_dim=input_dim,
             hidden_dim=hidden_dim,

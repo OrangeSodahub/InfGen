@@ -6,7 +6,7 @@ from torch_geometric.loader import DataLoader
 
 from infgen.datasets.scalable_dataset import MultiDataset, WaymoTargetBuilder
 from infgen.utils.func import load_config_act, Logging
-from infgen.model.smart import SMART
+from infgen.model.infgen import InfGen
 
 CONSOLE = Console(width=120)
 
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     CONSOLE.log(f"Results will be saved to [yellow]{save_path}[/]")
     os.makedirs(save_path, exist_ok=True)
 
-    model = SMART(config.Model, save_path=save_path, logger=logger, insert_agent=args.insert_agent, t=args.t)
+    model = InfGen(config.Model, save_path=save_path, logger=logger, insert_agent=args.insert_agent, t=args.t)
     CONSOLE.log(f"Loaded model from [yellow]{args.ckpt_path}[/]")
 
     trainer_config = config.Trainer

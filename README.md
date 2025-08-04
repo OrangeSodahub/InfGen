@@ -57,7 +57,7 @@ The first path is the raw data path, and the second is the output data path.
 The processed data will be saved to the `data/waymo_processed/` directory as follows:
 
 ```
-SMART
+InfGen
 ├── data
 │   ├── waymo_processed
 │   │   ├── training

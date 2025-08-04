@@ -53,7 +53,7 @@ Trainer:
   accumulate_grad_batches: 1
 
 Model:
-  predictor: "smart"
+  predictor: "infgen"
   decoder_type: "agent_decoder" # choose from ['agent_decoder', 'occ_decoder']
   dataset: "waymo"
   input_dim: 2

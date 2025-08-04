@@ -95,7 +95,7 @@ class HungarianMatcher(nn.Module):
         return "\n".join(lines)
 
 
-class SMARTAgentDecoder(nn.Module):
+class InfGenAgentDecoder(nn.Module):
 
     def __init__(self,
                  dataset: str,
@@ -130,7 +130,7 @@ class SMARTAgentDecoder(nn.Module):
                  loss_weight: dict=None,
                  logger=None) -> None:
 
-        super(SMARTAgentDecoder, self).__init__()
+        super(InfGenAgentDecoder, self).__init__()
         self.dataset = dataset
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim

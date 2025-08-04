@@ -436,7 +436,7 @@ def plot_raw():
     plt.figure(figsize=(30, 30))
     plt.rcParams['axes.facecolor']='white'
 
-    data_path = '/u/xiuyu/work/dev4/data/waymo/scenario/training'
+    data_path = 'data/waymo/scenario/training'
     os.makedirs("data/vis/raw/0/", exist_ok=True)
     file_list = os.listdir(data_path)
 
@@ -530,7 +530,7 @@ colors = [
 
 @safe_run
 def plot_gif():
-    data_path = "/u/xiuyu/work/dev4/data/waymo_processed/training"
+    data_path = "data/waymo_processed/training"
     os.makedirs("data/vis/processed/0/gif", exist_ok=True)
     file_list = os.listdir(data_path)
 
@@ -1072,7 +1072,7 @@ def match_token_map(data):
 
     # init map token
     argmin_sample_len = 3
-    map_token_traj_path = '/u/xiuyu/work/dev4/dev/tokens/map_traj_token5.pkl'
+    map_token_traj_path = 'tokens/map_traj_token5.pkl'
 
     map_token_traj = pickle.load(open(map_token_traj_path, 'rb'))
     map_token = {'traj_src': map_token_traj['traj_src'], }
@@ -1335,7 +1335,7 @@ def plot_comparison(methods: List[str], rollouts_paths: List[str], gt_folders: L
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument('--data_path', type=str, default='/u/xiuyu/work/dev4/data/waymo_processed')
+    parser.add_argument('--data_path', type=str, default='/data/waymo_processed')
     parser.add_argument('--tfrecord_dir', type=str, default='validation_tfrecords_splitted')
     # plot tokenized data
     parser.add_argument('--save_folder', type=str, default='plot_gt')
@@ -1356,7 +1356,6 @@ if __name__ == "__main__":
     if args.plot_tokenize:
 
         scenario_id = "74ad7b76d5906d39"
-        # scenario_id = "1d60300bc06f4801"
         data_path = os.path.join(args.data_path, args.split, f"{scenario_id}.pkl")
         data = pickle.load(open(data_path, "rb"))
         data['tfrecord_path'] = os.path.join(args.tfrecord_dir, f'{scenario_id}.tfrecords')
@@ -1378,21 +1377,15 @@ if __name__ == "__main__":
 
     if args.plot_comparison:
 
-        methods = ['ours', 'smart']
+        methods = ['ours', 'infgen']
         gt_folders = [
-            '/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/data/processed',
-            '/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/data/processed',
-            '/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/data/processed',
         ]
         rollouts_paths = [
-            '/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/output/scalable_smart_long/validation_ours0',
-            '/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/output/scalable_smart_long/validation_smart',
-            '/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/output/scalable_smart_long/validation_cslft',
         ]
-        save_path = f'/baai-cwm-1/baai_cwm_ml/algorithm/xiuyu.yang/work/dev4/output/scalable_smart_long/{args.comparison_folder}/'
+        save_path = f'outputs/scalable_infgen_long/{args.comparison_folder}/'
         os.makedirs(save_path, exist_ok=True)
 
-        scenario_ids = ['72ff3e1540b28431','a16c927b1a1cca74','a504d55ea6658de7','639949ea1d16125b']
+        scenario_ids = []
         plot_comparison(methods, rollouts_paths, gt_folders,
                         save_path=save_path,
                         scenario_ids=scenario_ids)

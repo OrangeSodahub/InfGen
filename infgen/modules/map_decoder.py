@@ -10,7 +10,7 @@ from infgen.modules.layers import MLPLayer, AttentionLayer, FourierEmbedding, ML
 from infgen.utils.func import weight_init, wrap_angle, angle_between_2d_vectors
 
 
-class SMARTMapDecoder(nn.Module):
+class InfGenMapDecoder(nn.Module):
 
     def __init__(self,
                  dataset: str,
@@ -25,7 +25,7 @@ class SMARTMapDecoder(nn.Module):
                  dropout: float,
                  map_token) -> None:
 
-        super(SMARTMapDecoder, self).__init__()
+        super(InfGenMapDecoder, self).__init__()
         self.dataset = dataset
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim

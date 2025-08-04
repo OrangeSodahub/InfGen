@@ -54,7 +54,7 @@ Trainer:
 
 Model:
   mode: "train"
-  predictor: "smart"
+  predictor: "infgen"
   decoder_type: "agent_decoder"
   dataset: "waymo"
   input_dim: 2
